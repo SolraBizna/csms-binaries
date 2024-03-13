@@ -12,7 +12,7 @@ For every push we make to our [official `second-music-system` repository][1] (in
 Given a GitHub Actions run whose binaries you want to ingest, you can manually update this directory using the included `update.lua`. You will need the following prerequisites:
 
 - UNIX-like operating environment (WSL, MinGW/Git Bash, Cygwin, or... actually being on a UNIX-like OS)
-- Lua 5.4
+- Lua 5.3 or 5.4
 - Lua `cjson`, `lfs`, `http`, and `base64` modules (use `luarocks` to install `lua-cjson2`, `luafilesystem`, `http`, `base64` respectively)
 - `unzip` and `git` utilities
 - A [GitHub Personal Access Token][3] with access to the Second Music System repository you want to ingest (this is unfortunately mandatory even if the SMS repo is public)
