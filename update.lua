@@ -1,4 +1,4 @@
-#!/usr/bin/env lua5.4
+#!/usr/bin/env lua
 
 if package == nil or package.config == nil or package.config:sub(1,2) ~= "/\n" then
     io.stderr:write[[
@@ -13,7 +13,7 @@ layer (e.g. MinGW, Git Bash, Cygwin, or WSL).
     os.exit(1)
 end
 
-local DEPS<const> = {
+local DEPS = {
     {module="cjson", package="lua-cjson2"},
     {module="lfs", package="luafilesystem"},
     {module="http.request", package="http"},
@@ -80,8 +80,8 @@ end
 local cjson, lfs, http_request, base64
     = require "cjson", require "lfs", require "http.request", require "base64"
 
-if _VERSION ~= "Lua 5.4" then
-    io.stderr:write("Warning! This script was made for Lua 5.4, not "..tostring(_VERSION)..".\n(We'll try to run anyway.)\n")
+if _VERSION ~= "Lua 5.3" and _VERSION ~= "Lua 5.4" then
+    io.stderr:write("Warning! This script is only tested with Lua 5.3 and 5.4, but you have "..tostring(_VERSION)..".\n(We'll try to run anyway.)\n")
 end
 
 local debuggy = false
