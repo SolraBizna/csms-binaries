@@ -15,7 +15,9 @@ Given a GitHub Actions run whose binaries you want to ingest, you can manually u
 - Lua 5.4
 - Lua `cjson`, `lfs`, `http`, and `base64` modules (use `luarocks` to install `lua-cjson2`, `luafilesystem`, `http`, `base64` respectively)
 - `unzip` and `git` utilities
-- A Personal Access Token
+- A [GitHub Personal Access Token][3] with access to the Second Music System repository you want to ingest (this is unfortunately mandatory even if the SMS repo is public)
+
+[3]: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
 
 With the prerequisites in place, use a command line like:
 
